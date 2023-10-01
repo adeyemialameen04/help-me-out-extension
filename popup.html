@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Sora:wght@100;200;300;400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpMeOut</title>
+    <link rel="stylesheet" href="./popup.css" />
+    <link rel="stylesheet" href="resets.css" />
+  </head>
+  <body>
+    <div>
+      <div class="popup__container">
+        <div class="top">
+          <div class="logo__container">
+            <img src="/icons/logo.png" alt="" />
+            <img src="/icons/HelpMeOut.png" alt="" />
+          </div>
+          <div class="left__icon">
+            <img src="/icons/setting-2.png" alt="" />
+            <img src="/icons/close-circle.png" alt="" />
+          </div>
+        </div>
+        <div class="desc">
+          This extension helps you record and share help videos with ease.
+        </div>
+        <div class="tabs">
+          <div>
+            <img src="/icons/monitor.png" alt="" />
+            <p>Full screen</p>
+          </div>
+          <div>
+            <img src="/icons/copy.png" alt="" />
+            <p>Current Tab</p>
+          </div>
+        </div>
+        <div class="permissions">
+          <div>
+            <span>
+              <img src="/icons/video-camera.png" alt="" />
+              Camera
+            </span>
+            <input type="checkbox" name="" id="cameraOption" />
+          </div>
+          <div>
+            <span>
+              <img src="/icons/microphone.png" alt="" />
+              Audio
+            </span>
+            <input type="checkbox" name="" id="audioOption" />
+          </div>
+        </div>
+        <button id="startBtn" class="start">Start Recording</button>
+      </div>
+    </div>
+    <!-- <div class="controlsContainer">
+      <div class="time">
+        <p>00:03:35</p>
+        <span></span>
+      </div>
+      <div class="controlItemsContainer">
+        <div class="controlItem">
+          <button>
+            <img src="/icons/pause.png" alt="" />
+          </button>
+          <small>Pause</small>
+        </div>
+        <div class="controlItem">
+          <button>
+            <img src="/icons/Rectangle 437.png" alt="" />
+          </button>
+          <small>Stop</small>
+        </div>
+        <div class="controlItem">
+          <button>
+            <img src="/icons/video-camera.png" alt="" />
+          </button>
+          <small>Camera</small>
+        </div>
+        <div>
+          <button class="bin-btn">
+            <img src="/icons/bin.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </div> -->
+    <script src="popup.js"></script>
+    <!-- <script src="controls.js"></script> -->
+    <!-- <script src="new.js"></script> -->
+  </body>
+</html>
