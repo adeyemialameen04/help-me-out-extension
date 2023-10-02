@@ -155,46 +155,20 @@ function onAccessApproved(stream) {
   stopBtn.addEventListener("click", () => {
     if (!recorder) return console.log("No recorder");
     recorder.stop();
-    // let a = document.createElement("a");
-    // a.href = "http://localhost:5173/";
-    // document.body.appendChild(a);
-    // a.click();
-    // document.body.removeChild(a);
+    let a = document.createElement("a");
+    a.href = "http://localhost:5173/";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   });
 
   recorder.ondataavailable = async function (event) {
-    const endpoint = "https://hngx-chrome-extension-api.onrender.com/api";
+    // const endpoint = "https://hngx-chrome-extension-api.onrender.com/api";
     let recordedBlob = event.data;
     const formData = new FormData();
     const date = new Date().getMilliseconds();
     const randomLetters = "vwedvwhjwgdcewgjvyihf";
     const videoId = `${date}${randomLetters}`;
-    formData.append("blob", recordedBlob);
-    formData.append("videoId", videoId);
-    // https://www.youtube.com/watch?v=rU_PSF0U2Cw&t=358s
-    const fetchURL = `${endpoint}/video/stream`;
-    const req = await fetch(fetchURL, {
-      method: "POST",
-      body: formData,
-    });
-    const result = await req.json();
-
-    console.log(event.data);
-    // let url = URL.createObjectURL(recordedBlob);
-    // console.log(url);
-    // let a = document.createElement("a");
-
-    // a.style.display = "none";
-    // a.href = url;
-    // a.download = "screen-recording.webm";
-    //
-    // document.body.appendChild(a);
-    // a.click();
-    //
-    // document.body.removeChild(a);
-    //
-    // URL.revokeObjectURL(url);
-    // console.log(recordedChunks);
     console.log(result);
   };
 }
